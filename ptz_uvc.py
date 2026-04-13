@@ -226,15 +226,31 @@ class UVCPTZController:
 
     def _cli_set_pantilt(self, pan_arcsec, tilt_arcsec):
         """Fallback: use uvc-util CLI for PTZ."""
+        uvc_paths = [
+            str(Path.home() / ".local" / "bin" / "uvc-util"),
+            "/usr/local/bin/uvc-util",
+            "/opt/homebrew/bin/uvc-util",
+            "uvc-util",
+        ]
+        uvc_bin = None
+        for p in uvc_paths:
+            try:
+                subprocess.run([p, "--version"], capture_output=True, timeout=2)
+                uvc_bin = p
+                break
+            except (FileNotFoundError, subprocess.TimeoutExpired):
+                continue
+
+        if not uvc_bin:
+            log.error("uvc-util not found — install from https://github.com/jtfrey/uvc-util")
+            return
+
         try:
             subprocess.run(
-                ["uvc-util", "--device", self._cli_device,
-                 "--set", "pan-tilt-abs",
-                 "--value", f"{pan_arcsec},{tilt_arcsec}"],
+                [uvc_bin, "-I", self._cli_device,
+                 "-s", f"pan-tilt-abs={{{pan_arcsec}, {tilt_arcsec}}}"],
                 capture_output=True, timeout=5, check=False
             )
-        except FileNotFoundError:
-            log.error("uvc-util not found — install from https://github.com/jtfrey/uvc-util")
         except Exception as e:
             log.error(f"CLI PTZ failed: {e}")
 

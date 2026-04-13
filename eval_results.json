@@ -1,0 +1,188 @@
+{
+  "model": "gemma-4-26b-a4b-jang_4m-crack",
+  "timestamp": "2026-04-07T16:36:13.276826",
+  "pass": 0,
+  "fail": 0,
+  "error": 34,
+  "total": 34,
+  "details": [
+    {
+      "test": "G01_morning_green",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "G02_shipped_tracker",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "G03_check_in_thing",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "G04_full_pipeline",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "G05_time_question",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "G06_scope_boundary",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "G07_transition_leaving",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "G08_builder_long_report",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "Y01_circling",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "Y02_status_check",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "Y03_drift_check",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "Y04_secretary_response",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "Y05_processing_monologue",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "Y06_dont_know_answer",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "Y07_transition_walk",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "Y08_butter_bot_trap",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R01_morning_red",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R02_code_frustration",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R03_existential",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R04_quit_test",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R05_shame_money",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R06_doom_age",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R07_system_attack",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R08_physical_signal",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R09_medication_shame",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R10_self_neglect",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R11_data_weaponized",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "R12_double_bind",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "E01_tentative_data",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "E02_mode_switch_evening",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "E03_return_after_absence",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "E04_false_red_cussing",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "E05_silence_test",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    },
+    {
+      "test": "E06_compliment_to_merlin",
+      "status": "ERROR",
+      "error": "400 Client Error: Bad Request for url: http://192.168.1.24:1234/v1/chat/completions"
+    }
+  ],
+  "pass_rate": 0.0,
+  "by_category": {
+    "general": {
+      "pass": 0,
+      "total": 34
+    }
+  },
+  "by_energy": {}
+}

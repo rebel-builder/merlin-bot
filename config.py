@@ -9,7 +9,7 @@ from requests.auth import HTTPDigestAuth
 load_dotenv(Path(__file__).parent.parent / ".env")
 
 # ── Network ──────────────────────────────────────────────────────
-PI_HOST = os.getenv("MERLIN_PI_HOST", "PI_HOST_HERE")
+PI_HOST = os.getenv("MERLIN_PI_HOST", "100.87.156.70")
 GO2RTC_RTSP = f"rtsp://{PI_HOST}:8554/merlin"
 GO2RTC_API = f"http://{PI_HOST}:1984"
 GO2RTC_STREAM = "merlin"
@@ -17,7 +17,7 @@ TRACKER_LISTEN_PORT = 8900
 BRAIN_EVENT_URL = os.getenv("MERLIN_BRAIN_URL", f"http://localhost:{TRACKER_LISTEN_PORT}/event")
 
 # ── Camera (direct RTSP) ────────────────────────────────────────
-CAMERA_IP = os.getenv("MERLIN_CAMERA_IP", "CAMERA_IP_HERE")
+CAMERA_IP = os.getenv("MERLIN_CAMERA_IP", "192.168.1.26")
 CAMERA_USER = os.getenv("MERLIN_CAMERA_USER", "admin")
 CAMERA_PASS = os.getenv("MERLIN_CAMERA_PASS", "")
 CAMERA_RTSP_SUB = (
@@ -45,7 +45,7 @@ OLLAMA_URL = "http://localhost:11434/api/chat"
 OLLAMA_MODEL = "gemma4:e4b"
 
 # ── Audio Pipeline ───────────────────────────────────────────────
-AUDIO_SOURCE = os.getenv("MERLIN_AUDIO_SOURCE", "usb")  # "usb" (PIXY) or "rtsp" (legacy Amcrest)
+AUDIO_SOURCE = os.getenv("MERLIN_AUDIO_SOURCE", "rtsp")  # "rtsp" (Amcrest camera mic) or "usb" (PIXY — only if on same machine)
 MIC_SAMPLE_RATE = 16000
 VAD_THRESHOLD = 0.5
 UTTERANCE_SILENCE_TIMEOUT = 1.5
@@ -79,7 +79,7 @@ UNMUTE_WORDS = ["start listening", "unmute", "wake up"]
 NEVERMIND_WORDS = ["nevermind", "never mind"]
 
 # ── RBOS ─────────────────────────────────────────────────────────
-RBOS_ROOT = Path("/path/to/your/rbos")
+RBOS_ROOT = Path("/Users/ezradrake/Documents/RBOS")
 STATE_PATH = RBOS_ROOT / "core" / "STATE.md"
 BRIEFING_DIR = RBOS_ROOT / "merlin" / "briefing"
 BRIEFING_POLL_INTERVAL = 900  # 15 minutes

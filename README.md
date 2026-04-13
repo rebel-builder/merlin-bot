@@ -62,7 +62,7 @@ brain.py v2 uses an intent-aware conversation architecture:
 5. **Command short-circuit** -- capture, time, remind bypass the LLM entirely
 6. **Conversation state machine** -- tracks phase (idle, greeted, working, winding down, venting) with time-based decay
 7. **Intent-specific prompting** -- each intent gets a tailored system prompt injection and token limit
-8. **LLM call** via OpenAI-compatible API (LM Studio or Ollama) with assembled context:
+8. **LLM call** via OpenAI-compatible API (LM Studio) with assembled context:
    - Character prompt (voice rules)
    - RBOS context (today's focus, energy, shift, schedule, shipped items)
    - Scene description (what the camera sees, pre-computed in background)
@@ -134,7 +134,7 @@ pip install torch  # for Silero VAD
 2. Search for and download `qwen/qwen3-vl-4b` (MLX format)
 3. Start the server (Developer tab → Start Server, port 1234)
 
-Alternative: Use Ollama with any OpenAI-compatible model.
+Alternative: Use any OpenAI-compatible local LLM server.
 
 ### 4. Install libuvc (for PTZ control)
 
@@ -238,3 +238,10 @@ Built by [Ezra Drake](https://x.com/Ezra_Drake) as part of the Rebel-Builder Ope
 ## License
 
 MIT License. See [LICENSE](LICENSE).
+
+## Organon Concepts
+
+- [[Extended Mind]]
+- [[Integration (Mental)]]
+- [[Automatization]]
+- [[Abstraction (process of)]]

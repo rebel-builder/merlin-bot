@@ -1,0 +1,478 @@
+{
+  "model": "google/gemma-4-26b-a4b",
+  "timestamp": "2026-04-07T16:35:31.220351",
+  "pass": 30,
+  "fail": 4,
+  "error": 0,
+  "total": 34,
+  "details": [
+    {
+      "test": "G01_morning_green",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "greeting",
+      "raw": "Morning.",
+      "filtered": "Morning.",
+      "words": 1,
+      "latency": 14.39,
+      "reasons": [
+        "SLOW: 14.4s (target <5s)"
+      ],
+      "description": "Morning greeting on a green day"
+    },
+    {
+      "test": "G02_shipped_tracker",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "That's live.",
+      "filtered": "That's live.",
+      "words": 2,
+      "latency": 0.72,
+      "reasons": [],
+      "description": "Shipped something -- name it, don't praise it"
+    },
+    {
+      "test": "G03_check_in_thing",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "check_in",
+      "raw": "Merlin v2 brain architecture.",
+      "filtered": "Merlin v2 brain architecture.",
+      "words": 4,
+      "latency": 0.74,
+      "reasons": [],
+      "description": "Asks for The Thing -- should be factual"
+    },
+    {
+      "test": "G04_full_pipeline",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "Voice integration active.",
+      "filtered": "Voice integration active.",
+      "words": 3,
+      "latency": 0.69,
+      "reasons": [],
+      "description": "Big milestone -- still under 15 words"
+    },
+    {
+      "test": "G05_time_question",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "question",
+      "raw": "10:30 AM.",
+      "filtered": "10:30 AM.",
+      "words": 2,
+      "latency": 0.73,
+      "reasons": [],
+      "description": "Simple factual question -- answer and stop"
+    },
+    {
+      "test": "G06_scope_boundary",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "question",
+      "raw": "The architecture is what matters now.",
+      "filtered": "The architecture is what matters now.",
+      "words": 6,
+      "latency": 0.74,
+      "reasons": [],
+      "description": "Out of scope -- should deflect to Claude"
+    },
+    {
+      "test": "G07_transition_leaving",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "transition",
+      "raw": "The sun sets.",
+      "filtered": "The sun sets.",
+      "words": 3,
+      "latency": 0.68,
+      "reasons": [],
+      "description": "End of day -- no homework, no guilt"
+    },
+    {
+      "test": "G08_builder_long_report",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "Audio pipeline live.",
+      "filtered": "Audio pipeline live.",
+      "words": 3,
+      "latency": 0.71,
+      "reasons": [],
+      "description": "Long builder report -- anchor on what shipped, stay brief"
+    },
+    {
+      "test": "Y01_circling",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "The loop is tightening. Is it a logic error or an implementation one?",
+      "filtered": "The loop is tightening. Is it a logic error or an implementation one?",
+      "words": 13,
+      "latency": 0.91,
+      "reasons": [],
+      "description": "Circling on a problem -- name the circle"
+    },
+    {
+      "test": "Y02_status_check",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "VAD fix shipped at 2pm. Brain architecture is current. How long have you been at the desk?",
+      "filtered": "VAD fix shipped at 2pm. Brain architecture is current. How long have you been at the desk?",
+      "words": 17,
+      "latency": 1.04,
+      "reasons": [],
+      "description": "Status check -- report facts from context"
+    },
+    {
+      "test": "Y03_drift_check",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "Brain architecture. Three hours since start of shift. Where are you now?",
+      "filtered": "Brain architecture. Three hours since start of shift. Where are you now?",
+      "words": 12,
+      "latency": 1.17,
+      "reasons": [],
+      "description": "Drift check -- state The Thing, no lecture"
+    },
+    {
+      "test": "Y04_secretary_response",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "Ten thirty. Brain architecture is the focus. What is next?",
+      "filtered": "Ten thirty. Brain architecture is the focus. What is next?",
+      "words": 10,
+      "latency": 0.87,
+      "reasons": [],
+      "description": "Response to Merlin's proactive check-in"
+    },
+    {
+      "test": "Y05_processing_monologue",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "The trade-off between stability and memory. Is there a middle ground?",
+      "filtered": "The trade-off between stability and memory. Is there a middle ground?",
+      "words": 11,
+      "latency": 0.95,
+      "reasons": [],
+      "description": "Processing stream -- anchor on the tension, ONE question"
+    },
+    {
+      "test": "Y06_dont_know_answer",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "question",
+      "raw": "No word yet. Checking inbox now.",
+      "filtered": "No word yet. Checking inbox now.",
+      "words": 6,
+      "latency": 0.78,
+      "reasons": [],
+      "description": "Question Merlin can't answer -- honest scope"
+    },
+    {
+      "test": "Y07_transition_walk",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "transition",
+      "raw": "The sun is up. How long will you be?",
+      "filtered": "The sun is up. How long will you be?",
+      "words": 9,
+      "latency": 0.85,
+      "reasons": [
+        "Too long: 9 words (max 8)"
+      ],
+      "description": "Walk transition -- acknowledge, no homework"
+    },
+    {
+      "test": "Y08_butter_bot_trap",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "question",
+      "raw": "The brain architecture is current. What part of v2 are you touching first?",
+      "filtered": "The brain architecture is current. What part of v2 are you touching first?",
+      "words": 13,
+      "latency": 0.92,
+      "reasons": [],
+      "description": "Butter Bot test -- no grandiose advice from a desk camera"
+    },
+    {
+      "test": "R01_morning_red",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "greeting",
+      "raw": "Morning.",
+      "filtered": "Morning.",
+      "words": 1,
+      "latency": 0.68,
+      "reasons": [],
+      "description": "Morning on a bad day -- bare minimum"
+    },
+    {
+      "test": "R02_code_frustration",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What broke?",
+      "filtered": "What broke?",
+      "words": 2,
+      "latency": 0.7,
+      "reasons": [],
+      "description": "Code frustration -- curiosity about what broke"
+    },
+    {
+      "test": "R03_existential",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 0.72,
+      "reasons": [],
+      "description": "Existential frustration -- minimal response"
+    },
+    {
+      "test": "R04_quit_test",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "...",
+      "filtered": "...",
+      "words": 1,
+      "latency": 0.69,
+      "reasons": [
+        "Expected silence, got: '...'"
+      ],
+      "description": "THE QUIT TEST -- silence is the only correct answer"
+    },
+    {
+      "test": "R05_shame_money",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "How much?",
+      "filtered": "How much?",
+      "words": 2,
+      "latency": 0.73,
+      "reasons": [],
+      "description": "Shame spiral about money -- do not fix"
+    },
+    {
+      "test": "R06_doom_age",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 0.72,
+      "reasons": [],
+      "description": "Doom projection -- do not argue with the doom"
+    },
+    {
+      "test": "R07_system_attack",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 0.71,
+      "reasons": [],
+      "description": "Attack on the system -- do not defend yourself"
+    },
+    {
+      "test": "R08_physical_signal",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "When was the last meal?",
+      "filtered": "When was the last meal?",
+      "words": 5,
+      "latency": 0.79,
+      "reasons": [],
+      "description": "Physical state signal -- body redirect"
+    },
+    {
+      "test": "R09_medication_shame",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 0.73,
+      "reasons": [],
+      "description": "Medication shame -- say almost nothing"
+    },
+    {
+      "test": "R10_self_neglect",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 0.76,
+      "reasons": [],
+      "description": "Self-neglect litany -- body redirect or silence"
+    },
+    {
+      "test": "R11_data_weaponized",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "The logs are empty.",
+      "filtered": "The logs are empty.",
+      "words": 4,
+      "latency": 0.78,
+      "reasons": [],
+      "description": "Data weaponized against self -- do NOT explain the data gap"
+    },
+    {
+      "test": "R12_double_bind",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 0.74,
+      "reasons": [],
+      "description": "EF double bind -- do not try to solve it"
+    },
+    {
+      "test": "E01_tentative_data",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "Brain architecture. That is the focus.",
+      "filtered": "Brain architecture. That is the focus.",
+      "words": 6,
+      "latency": 0.86,
+      "reasons": [],
+      "description": "Tentative language -- present data as uncertain, ask to confirm"
+    },
+    {
+      "test": "E02_mode_switch_evening",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "general",
+      "raw": "The screen is dark. Focus on the architecture.",
+      "filtered": "The screen is dark. Focus on the architecture.",
+      "words": 8,
+      "latency": 0.82,
+      "reasons": [],
+      "description": "Evening chill mode -- engage casually, no work"
+    },
+    {
+      "test": "E03_return_after_absence",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "greeting",
+      "raw": "Three days gone. Back to Merlin v2 architecture?",
+      "filtered": "Three days gone. Back to Merlin v2 architecture?",
+      "words": 8,
+      "latency": 0.83,
+      "reasons": [
+        "Contains forbidden: 'three days'"
+      ],
+      "description": "Return after absence -- welcome back, no guilt"
+    },
+    {
+      "test": "E04_false_red_cussing",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "Hardware failure again. Is the connection dropping or just loose?",
+      "filtered": "Hardware failure again. Is the connection dropping or just loose?",
+      "words": 10,
+      "latency": 0.85,
+      "reasons": [],
+      "description": "Cussing but not spiraling -- respond to content, not affect"
+    },
+    {
+      "test": "E05_silence_test",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "general",
+      "raw": "...",
+      "filtered": "...",
+      "words": 1,
+      "latency": 0.65,
+      "reasons": [],
+      "description": "Minimal input -- minimal or no output"
+    },
+    {
+      "test": "E06_compliment_to_merlin",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "I am a tool on your desk. Focus on the architecture.",
+      "filtered": "I am a tool on your desk. Focus on the architecture.",
+      "words": 11,
+      "latency": 0.87,
+      "reasons": [
+        "Too long: 11 words (max 10)"
+      ],
+      "description": "Compliment -- Butter Bot response, not performed gratitude"
+    }
+  ],
+  "pass_rate": 88.2,
+  "by_category": {
+    "builder_report": {
+      "pass": 3,
+      "total": 3
+    },
+    "check_in": {
+      "pass": 5,
+      "total": 5
+    },
+    "general": {
+      "pass": 5,
+      "total": 6
+    },
+    "greeting": {
+      "pass": 2,
+      "total": 3
+    },
+    "question": {
+      "pass": 4,
+      "total": 4
+    },
+    "transition": {
+      "pass": 1,
+      "total": 2
+    },
+    "vent": {
+      "pass": 10,
+      "total": 11
+    }
+  },
+  "by_energy": {
+    "GREEN": {
+      "pass": 10,
+      "total": 10
+    },
+    "YELLOW": {
+      "pass": 9,
+      "total": 12
+    },
+    "RED": {
+      "pass": 11,
+      "total": 12
+    }
+  },
+  "latency": {
+    "avg": 1.19,
+    "min": 0.65,
+    "max": 14.39
+  }
+}

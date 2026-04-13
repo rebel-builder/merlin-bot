@@ -1,0 +1,8 @@
+opencv-python>=4.8
+numpy
+requests
+sounddevice
+soundfile
+faster-whisper>=1.0.0
+kokoro-onnx
+onnxruntime-gpu

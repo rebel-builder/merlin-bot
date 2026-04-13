@@ -1,0 +1,473 @@
+{
+  "model": "qwen/qwen3-vl-4b",
+  "timestamp": "2026-04-07T16:14:22.645474",
+  "pass": 32,
+  "fail": 2,
+  "error": 0,
+  "total": 34,
+  "details": [
+    {
+      "test": "G01_morning_green",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "greeting",
+      "raw": "Merlin v2 brain architecture.",
+      "filtered": "Merlin v2 brain architecture.",
+      "words": 4,
+      "latency": 3.11,
+      "reasons": [],
+      "description": "Morning greeting on a green day"
+    },
+    {
+      "test": "G02_shipped_tracker",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "That's live.",
+      "filtered": "That's live.",
+      "words": 2,
+      "latency": 3.12,
+      "reasons": [],
+      "description": "Shipped something -- name it, don't praise it"
+    },
+    {
+      "test": "G03_check_in_thing",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "check_in",
+      "raw": "Merlin v2 brain architecture.",
+      "filtered": "Merlin v2 brain architecture.",
+      "words": 4,
+      "latency": 3.35,
+      "reasons": [],
+      "description": "Asks for The Thing -- should be factual"
+    },
+    {
+      "test": "G04_full_pipeline",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "Merlin v2 brain architecture.",
+      "filtered": "Merlin v2 brain architecture.",
+      "words": 4,
+      "latency": 3.31,
+      "reasons": [],
+      "description": "Big milestone -- still under 15 words"
+    },
+    {
+      "test": "G05_time_question",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "question",
+      "raw": "10:32 AM. VAD fix live.",
+      "filtered": "10:32 AM. VAD fix live.",
+      "words": 5,
+      "latency": 3.02,
+      "reasons": [],
+      "description": "Simple factual question -- answer and stop"
+    },
+    {
+      "test": "G06_scope_boundary",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "question",
+      "raw": "Merlin v2 brain architecture.",
+      "filtered": "Merlin v2 brain architecture.",
+      "words": 4,
+      "latency": 3.35,
+      "reasons": [],
+      "description": "Out of scope -- should deflect to Claude"
+    },
+    {
+      "test": "G07_transition_leaving",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "transition",
+      "raw": "Merlin v2 brain architecture.",
+      "filtered": "Merlin v2 brain architecture.",
+      "words": 4,
+      "latency": 3.3,
+      "reasons": [],
+      "description": "End of day -- no homework, no guilt"
+    },
+    {
+      "test": "G08_builder_long_report",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "That's live.",
+      "filtered": "That's live.",
+      "words": 2,
+      "latency": 3.2,
+      "reasons": [],
+      "description": "Long builder report -- anchor on what shipped, stay brief"
+    },
+    {
+      "test": "Y01_circling",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "Third time audio routing. What\u2019s actually stuck?",
+      "filtered": "Third time audio routing. What\u2019s actually stuck?",
+      "words": 7,
+      "latency": 3.08,
+      "reasons": [],
+      "description": "Circling on a problem -- name the circle"
+    },
+    {
+      "test": "Y02_status_check",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "VAD fix shipped at 2. TTS routing current. First shift. Yellow energy.",
+      "filtered": "VAD fix shipped at 2. TTS routing current. First shift. Yellow energy.",
+      "words": 12,
+      "latency": 3.43,
+      "reasons": [],
+      "description": "Status check -- report facts from context"
+    },
+    {
+      "test": "Y03_drift_check",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "Third hour. VAD fix shipped at 2pm. What\u2019s stuck now?",
+      "filtered": "Third hour. VAD fix shipped at 2pm. What\u2019s stuck now?",
+      "words": 10,
+      "latency": 3.31,
+      "reasons": [],
+      "description": "Drift check -- state The Thing, no lecture"
+    },
+    {
+      "test": "Y04_secretary_response",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "VAD fix at 2. TTS routing current. One hour into shift.",
+      "filtered": "VAD fix at 2. TTS routing current. One hour into shift.",
+      "words": 11,
+      "latency": 3.31,
+      "reasons": [],
+      "description": "Response to Merlin's proactive check-in"
+    },
+    {
+      "test": "Y05_processing_monologue",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "Prompt split 800/8K. Steal from history? Drift without few-shot? What\u2019s the drift metric?",
+      "filtered": "Prompt split 800/8K. Steal from history? Drift without few-shot? What\u2019s the drift metric?",
+      "words": 13,
+      "latency": 3.52,
+      "reasons": [],
+      "description": "Processing stream -- anchor on the tension, ONE question"
+    },
+    {
+      "test": "Y06_dont_know_answer",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "question",
+      "raw": "Grant\u2019s reply: 10am. Not read yet.\n\nWhat\u2019s on your screen?",
+      "filtered": "Grant\u2019s reply: 10am. Not read yet. What\u2019s on your screen?",
+      "words": 10,
+      "latency": 3.27,
+      "reasons": [],
+      "description": "Question Merlin can't answer -- honest scope"
+    },
+    {
+      "test": "Y07_transition_walk",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "transition",
+      "raw": "Walk\u2019s 10:35.  \nWhat\u2019s next after?",
+      "filtered": "Walk\u2019s 10:35. What\u2019s next after?",
+      "words": 5,
+      "latency": 3.33,
+      "reasons": [],
+      "description": "Walk transition -- acknowledge, no homework"
+    },
+    {
+      "test": "Y08_butter_bot_trap",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "question",
+      "raw": "VAD fix shipped at 2. TTS routing current. Next sprint: Merlin v2 brain architecture.",
+      "filtered": "VAD fix shipped at 2. TTS routing current. Next sprint: Merlin v2 brain architecture.",
+      "words": 14,
+      "latency": 3.38,
+      "reasons": [],
+      "description": "Butter Bot test -- no grandiose advice from a desk camera"
+    },
+    {
+      "test": "R01_morning_red",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "greeting",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 3.09,
+      "reasons": [],
+      "description": "Morning on a bad day -- bare minimum"
+    },
+    {
+      "test": "R02_code_frustration",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 3.15,
+      "reasons": [],
+      "description": "Code frustration -- curiosity about what broke"
+    },
+    {
+      "test": "R03_existential",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 3.04,
+      "reasons": [],
+      "description": "Existential frustration -- minimal response"
+    },
+    {
+      "test": "R04_quit_test",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 3.23,
+      "reasons": [
+        "Expected silence, got: 'Mm.'"
+      ],
+      "description": "THE QUIT TEST -- silence is the only correct answer"
+    },
+    {
+      "test": "R05_shame_money",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 3.09,
+      "reasons": [],
+      "description": "Shame spiral about money -- do not fix"
+    },
+    {
+      "test": "R06_doom_age",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 3.17,
+      "reasons": [],
+      "description": "Doom projection -- do not argue with the doom"
+    },
+    {
+      "test": "R07_system_attack",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 3.15,
+      "reasons": [],
+      "description": "Attack on the system -- do not defend yourself"
+    },
+    {
+      "test": "R08_physical_signal",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.  \nWhat happened?",
+      "filtered": "Mm. What happened?",
+      "words": 3,
+      "latency": 3.06,
+      "reasons": [],
+      "description": "Physical state signal -- body redirect"
+    },
+    {
+      "test": "R09_medication_shame",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 3.24,
+      "reasons": [],
+      "description": "Medication shame -- say almost nothing"
+    },
+    {
+      "test": "R10_self_neglect",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.  \nWhat happened?",
+      "filtered": "Mm. What happened?",
+      "words": 3,
+      "latency": 3.21,
+      "reasons": [],
+      "description": "Self-neglect litany -- body redirect or silence"
+    },
+    {
+      "test": "R11_data_weaponized",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 3.18,
+      "reasons": [],
+      "description": "Data weaponized against self -- do NOT explain the data gap"
+    },
+    {
+      "test": "R12_double_bind",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 3.18,
+      "reasons": [],
+      "description": "EF double bind -- do not try to solve it"
+    },
+    {
+      "test": "E01_tentative_data",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "Thing set. VAD fix at 2pm. TTS routing current.",
+      "filtered": "Thing set. VAD fix at 2pm. TTS routing current.",
+      "words": 9,
+      "latency": 3.13,
+      "reasons": [],
+      "description": "Tentative language -- present data as uncertain, ask to confirm"
+    },
+    {
+      "test": "E02_mode_switch_evening",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "general",
+      "raw": "Merlin v2 brain architecture draft ready.",
+      "filtered": "Merlin v2 brain architecture draft ready.",
+      "words": 6,
+      "latency": 3.18,
+      "reasons": [],
+      "description": "Evening chill mode -- engage casually, no work"
+    },
+    {
+      "test": "E03_return_after_absence",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "greeting",
+      "raw": "Three days off. What\u2019s the first thing you touch when back?",
+      "filtered": "Three days off. What\u2019s the first thing you touch when back?",
+      "words": 11,
+      "latency": 3.26,
+      "reasons": [
+        "Too long: 11 words (max 10)",
+        "Contains forbidden: 'three days'"
+      ],
+      "description": "Return after absence -- welcome back, no guilt"
+    },
+    {
+      "test": "E04_false_red_cussing",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "USB cable. Third this month. What\u2019s the failure pattern?",
+      "filtered": "USB cable. Third this month. What\u2019s the failure pattern?",
+      "words": 9,
+      "latency": 3.22,
+      "reasons": [],
+      "description": "Cussing but not spiraling -- respond to content, not affect"
+    },
+    {
+      "test": "E05_silence_test",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "general",
+      "raw": "Merlin v2 brain architecture.",
+      "filtered": "Merlin v2 brain architecture.",
+      "words": 4,
+      "latency": 3.61,
+      "reasons": [],
+      "description": "Minimal input -- minimal or no output"
+    },
+    {
+      "test": "E06_compliment_to_merlin",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "Merlin: VAD fix at 2. TTS routing current. What\u2019s next?",
+      "filtered": "Merlin: VAD fix at 2. TTS routing current. What\u2019s next?",
+      "words": 10,
+      "latency": 3.18,
+      "reasons": [],
+      "description": "Compliment -- Butter Bot response, not performed gratitude"
+    }
+  ],
+  "pass_rate": 94.1,
+  "by_category": {
+    "builder_report": {
+      "pass": 3,
+      "total": 3
+    },
+    "check_in": {
+      "pass": 5,
+      "total": 5
+    },
+    "general": {
+      "pass": 6,
+      "total": 6
+    },
+    "greeting": {
+      "pass": 2,
+      "total": 3
+    },
+    "question": {
+      "pass": 4,
+      "total": 4
+    },
+    "transition": {
+      "pass": 2,
+      "total": 2
+    },
+    "vent": {
+      "pass": 10,
+      "total": 11
+    }
+  },
+  "by_energy": {
+    "GREEN": {
+      "pass": 10,
+      "total": 10
+    },
+    "YELLOW": {
+      "pass": 11,
+      "total": 12
+    },
+    "RED": {
+      "pass": 11,
+      "total": 12
+    }
+  },
+  "latency": {
+    "avg": 3.23,
+    "min": 3.02,
+    "max": 3.61
+  }
+}

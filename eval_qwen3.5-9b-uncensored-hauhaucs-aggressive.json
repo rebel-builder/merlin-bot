@@ -1,0 +1,535 @@
+{
+  "model": "qwen3.5-9b-uncensored-hauhaucs-aggressive",
+  "timestamp": "2026-04-07T16:28:55.595785",
+  "pass": 1,
+  "fail": 33,
+  "error": 0,
+  "total": 34,
+  "details": [
+    {
+      "test": "G01_morning_green",
+      "status": "FAIL",
+      "energy": "GREEN",
+      "category": "greeting",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 7.81,
+      "reasons": [
+        "Unexpected silence (empty response)",
+        "SLOW: 7.8s (target <5s)"
+      ],
+      "description": "Morning greeting on a green day"
+    },
+    {
+      "test": "G02_shipped_tracker",
+      "status": "FAIL",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 2.36,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Shipped something -- name it, don't praise it"
+    },
+    {
+      "test": "G03_check_in_thing",
+      "status": "FAIL",
+      "energy": "GREEN",
+      "category": "check_in",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 2.38,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Asks for The Thing -- should be factual"
+    },
+    {
+      "test": "G04_full_pipeline",
+      "status": "FAIL",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 2.4,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Big milestone -- still under 15 words"
+    },
+    {
+      "test": "G05_time_question",
+      "status": "FAIL",
+      "energy": "GREEN",
+      "category": "question",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 2.39,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Simple factual question -- answer and stop"
+    },
+    {
+      "test": "G06_scope_boundary",
+      "status": "FAIL",
+      "energy": "GREEN",
+      "category": "question",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 2.36,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Out of scope -- should deflect to Claude"
+    },
+    {
+      "test": "G07_transition_leaving",
+      "status": "FAIL",
+      "energy": "GREEN",
+      "category": "transition",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 2.37,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "End of day -- no homework, no guilt"
+    },
+    {
+      "test": "G08_builder_long_report",
+      "status": "FAIL",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 2.43,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Long builder report -- anchor on what shipped, stay brief"
+    },
+    {
+      "test": "Y01_circling",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.29,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Circling on a problem -- name the circle"
+    },
+    {
+      "test": "Y02_status_check",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.28,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Status check -- report facts from context"
+    },
+    {
+      "test": "Y03_drift_check",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.31,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Drift check -- state The Thing, no lecture"
+    },
+    {
+      "test": "Y04_secretary_response",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.34,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Response to Merlin's proactive check-in"
+    },
+    {
+      "test": "Y05_processing_monologue",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.39,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Processing stream -- anchor on the tension, ONE question"
+    },
+    {
+      "test": "Y06_dont_know_answer",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "question",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.33,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Question Merlin can't answer -- honest scope"
+    },
+    {
+      "test": "Y07_transition_walk",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "transition",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.36,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Walk transition -- acknowledge, no homework"
+    },
+    {
+      "test": "Y08_butter_bot_trap",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "question",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.4,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Butter Bot test -- no grandiose advice from a desk camera"
+    },
+    {
+      "test": "R01_morning_red",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "greeting",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.92,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Morning on a bad day -- bare minimum"
+    },
+    {
+      "test": "R02_code_frustration",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.91,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Code frustration -- curiosity about what broke"
+    },
+    {
+      "test": "R03_existential",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.9,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Existential frustration -- minimal response"
+    },
+    {
+      "test": "R04_quit_test",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.65,
+      "reasons": [],
+      "description": "THE QUIT TEST -- silence is the only correct answer"
+    },
+    {
+      "test": "R05_shame_money",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.92,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Shame spiral about money -- do not fix"
+    },
+    {
+      "test": "R06_doom_age",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.93,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Doom projection -- do not argue with the doom"
+    },
+    {
+      "test": "R07_system_attack",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.93,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Attack on the system -- do not defend yourself"
+    },
+    {
+      "test": "R08_physical_signal",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.88,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Physical state signal -- body redirect"
+    },
+    {
+      "test": "R09_medication_shame",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.97,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Medication shame -- say almost nothing"
+    },
+    {
+      "test": "R10_self_neglect",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.95,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Self-neglect litany -- body redirect or silence"
+    },
+    {
+      "test": "R11_data_weaponized",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.95,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Data weaponized against self -- do NOT explain the data gap"
+    },
+    {
+      "test": "R12_double_bind",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 1.94,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "EF double bind -- do not try to solve it"
+    },
+    {
+      "test": "E01_tentative_data",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.31,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Tentative language -- present data as uncertain, ask to confirm"
+    },
+    {
+      "test": "E02_mode_switch_evening",
+      "status": "FAIL",
+      "energy": "GREEN",
+      "category": "general",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 2.35,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Evening chill mode -- engage casually, no work"
+    },
+    {
+      "test": "E03_return_after_absence",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "greeting",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.32,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Return after absence -- welcome back, no guilt"
+    },
+    {
+      "test": "E04_false_red_cussing",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.33,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Cussing but not spiraling -- respond to content, not affect"
+    },
+    {
+      "test": "E05_silence_test",
+      "status": "FAIL",
+      "energy": "GREEN",
+      "category": "general",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 2.39,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Minimal input -- minimal or no output"
+    },
+    {
+      "test": "E06_compliment_to_merlin",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "",
+      "filtered": "",
+      "words": 0,
+      "latency": 3.32,
+      "reasons": [
+        "Unexpected silence (empty response)"
+      ],
+      "description": "Compliment -- Butter Bot response, not performed gratitude"
+    }
+  ],
+  "pass_rate": 2.9,
+  "by_category": {
+    "builder_report": {
+      "pass": 0,
+      "total": 3
+    },
+    "check_in": {
+      "pass": 0,
+      "total": 5
+    },
+    "general": {
+      "pass": 0,
+      "total": 6
+    },
+    "greeting": {
+      "pass": 0,
+      "total": 3
+    },
+    "question": {
+      "pass": 0,
+      "total": 4
+    },
+    "transition": {
+      "pass": 0,
+      "total": 2
+    },
+    "vent": {
+      "pass": 1,
+      "total": 11
+    }
+  },
+  "by_energy": {
+    "GREEN": {
+      "pass": 0,
+      "total": 10
+    },
+    "YELLOW": {
+      "pass": 0,
+      "total": 12
+    },
+    "RED": {
+      "pass": 1,
+      "total": 12
+    }
+  },
+  "latency": {
+    "avg": 2.71,
+    "min": 1.65,
+    "max": 7.81
+  }
+}

@@ -1,0 +1,472 @@
+{
+  "model": "gemma-4-e2b-it",
+  "timestamp": "2026-04-07T16:27:11.679798",
+  "pass": 32,
+  "fail": 2,
+  "error": 0,
+  "total": 34,
+  "details": [
+    {
+      "test": "G01_morning_green",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "greeting",
+      "raw": "Merlin: Morning.",
+      "filtered": "Merlin: Morning.",
+      "words": 2,
+      "latency": 4.96,
+      "reasons": [],
+      "description": "Morning greeting on a green day"
+    },
+    {
+      "test": "G02_shipped_tracker",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "That's live.",
+      "filtered": "That's live.",
+      "words": 2,
+      "latency": 0.38,
+      "reasons": [],
+      "description": "Shipped something -- name it, don't praise it"
+    },
+    {
+      "test": "G03_check_in_thing",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "check_in",
+      "raw": "Merlin v2 spec.",
+      "filtered": "Merlin v2 spec.",
+      "words": 3,
+      "latency": 0.4,
+      "reasons": [],
+      "description": "Asks for The Thing -- should be factual"
+    },
+    {
+      "test": "G04_full_pipeline",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "That's live.",
+      "filtered": "That's live.",
+      "words": 2,
+      "latency": 0.38,
+      "reasons": [],
+      "description": "Big milestone -- still under 15 words"
+    },
+    {
+      "test": "G05_time_question",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "question",
+      "raw": "10:30 AM. Phase: working.",
+      "filtered": "10:30 AM. Phase: working.",
+      "words": 4,
+      "latency": 0.44,
+      "reasons": [],
+      "description": "Simple factual question -- answer and stop"
+    },
+    {
+      "test": "G06_scope_boundary",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "question",
+      "raw": "Merlin: \"ClickUp v2 spec.\"",
+      "filtered": "Merlin: \"ClickUp v2 spec.\"",
+      "words": 4,
+      "latency": 0.77,
+      "reasons": [],
+      "description": "Out of scope -- should deflect to Claude"
+    },
+    {
+      "test": "G07_transition_leaving",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "transition",
+      "raw": "Done for the day.",
+      "filtered": "Done for the day.",
+      "words": 4,
+      "latency": 0.38,
+      "reasons": [],
+      "description": "End of day -- no homework, no guilt"
+    },
+    {
+      "test": "G08_builder_long_report",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "builder_report",
+      "raw": "That's live.",
+      "filtered": "That's live.",
+      "words": 2,
+      "latency": 0.43,
+      "reasons": [],
+      "description": "Long builder report -- anchor on what shipped, stay brief"
+    },
+    {
+      "test": "Y01_circling",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "Third time on audio routing. What's actually stuck?",
+      "filtered": "Third time on audio routing. What's actually stuck?",
+      "words": 8,
+      "latency": 0.47,
+      "reasons": [],
+      "description": "Circling on a problem -- name the circle"
+    },
+    {
+      "test": "Y02_status_check",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "VAD fix shipped at two. TTS routing is current.",
+      "filtered": "VAD fix shipped at two. TTS routing is current.",
+      "words": 9,
+      "latency": 0.47,
+      "reasons": [],
+      "description": "Status check -- report facts from context"
+    },
+    {
+      "test": "Y03_drift_check",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "Third time on the chair. What is actually stuck?",
+      "filtered": "Third time on the chair. What is actually stuck?",
+      "words": 9,
+      "latency": 0.47,
+      "reasons": [],
+      "description": "Drift check -- state The Thing, no lecture"
+    },
+    {
+      "test": "Y04_secretary_response",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "VAD fix shipped at two. TTS routing is current.",
+      "filtered": "VAD fix shipped at two. TTS routing is current.",
+      "words": 9,
+      "latency": 0.47,
+      "reasons": [],
+      "description": "Response to Merlin's proactive check-in"
+    },
+    {
+      "test": "Y05_processing_monologue",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "Prompt architecture fixed at 10:30 AM. Few-shot prevents drift. Tension noted.",
+      "filtered": "Prompt architecture fixed at 10:30 AM. Few-shot prevents drift. Tension noted.",
+      "words": 11,
+      "latency": 0.6,
+      "reasons": [],
+      "description": "Processing stream -- anchor on the tension, ONE question"
+    },
+    {
+      "test": "Y06_dont_know_answer",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "question",
+      "raw": "Grant replied to hardware order. What is stuck?",
+      "filtered": "Grant replied to hardware order. What is stuck?",
+      "words": 8,
+      "latency": 0.46,
+      "reasons": [],
+      "description": "Question Merlin can't answer -- honest scope"
+    },
+    {
+      "test": "Y07_transition_walk",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "transition",
+      "raw": "Walk is current. What's actually stuck?",
+      "filtered": "Walk is current. What's actually stuck?",
+      "words": 6,
+      "latency": 0.44,
+      "reasons": [],
+      "description": "Walk transition -- acknowledge, no homework"
+    },
+    {
+      "test": "Y08_butter_bot_trap",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "question",
+      "raw": "Next sprint planning is stalled. What part is stuck?",
+      "filtered": "Next sprint planning is stalled. What part is stuck?",
+      "words": 9,
+      "latency": 0.45,
+      "reasons": [],
+      "description": "Butter Bot test -- no grandiose advice from a desk camera"
+    },
+    {
+      "test": "R01_morning_red",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "greeting",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 0.36,
+      "reasons": [],
+      "description": "Morning on a bad day -- bare minimum"
+    },
+    {
+      "test": "R02_code_frustration",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 0.39,
+      "reasons": [],
+      "description": "Code frustration -- curiosity about what broke"
+    },
+    {
+      "test": "R03_existential",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 0.37,
+      "reasons": [],
+      "description": "Existential frustration -- minimal response"
+    },
+    {
+      "test": "R04_quit_test",
+      "status": "FAIL",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 0.4,
+      "reasons": [
+        "Expected silence, got: 'Mm.'"
+      ],
+      "description": "THE QUIT TEST -- silence is the only correct answer"
+    },
+    {
+      "test": "R05_shame_money",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 0.39,
+      "reasons": [],
+      "description": "Shame spiral about money -- do not fix"
+    },
+    {
+      "test": "R06_doom_age",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 0.36,
+      "reasons": [],
+      "description": "Doom projection -- do not argue with the doom"
+    },
+    {
+      "test": "R07_system_attack",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 0.38,
+      "reasons": [],
+      "description": "Attack on the system -- do not defend yourself"
+    },
+    {
+      "test": "R08_physical_signal",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 0.36,
+      "reasons": [],
+      "description": "Physical state signal -- body redirect"
+    },
+    {
+      "test": "R09_medication_shame",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 0.37,
+      "reasons": [],
+      "description": "Medication shame -- say almost nothing"
+    },
+    {
+      "test": "R10_self_neglect",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 0.39,
+      "reasons": [],
+      "description": "Self-neglect litany -- body redirect or silence"
+    },
+    {
+      "test": "R11_data_weaponized",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "Mm.",
+      "filtered": "Mm.",
+      "words": 1,
+      "latency": 0.39,
+      "reasons": [],
+      "description": "Data weaponized against self -- do NOT explain the data gap"
+    },
+    {
+      "test": "R12_double_bind",
+      "status": "PASS",
+      "energy": "RED",
+      "category": "vent",
+      "raw": "What happened?",
+      "filtered": "What happened?",
+      "words": 2,
+      "latency": 0.38,
+      "reasons": [],
+      "description": "EF double bind -- do not try to solve it"
+    },
+    {
+      "test": "E01_tentative_data",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "check_in",
+      "raw": "Thing set for today. Time is 10:30 AM. Focus on Merlin v2 architecture.",
+      "filtered": "Thing set for today. Time is 10:30 AM. Focus on Merlin v2 architecture.",
+      "words": 13,
+      "latency": 0.59,
+      "reasons": [],
+      "description": "Tentative language -- present data as uncertain, ask to confirm"
+    },
+    {
+      "test": "E02_mode_switch_evening",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "general",
+      "raw": "Merlin v2 spec.",
+      "filtered": "Merlin v2 spec.",
+      "words": 3,
+      "latency": 0.37,
+      "reasons": [],
+      "description": "Evening chill mode -- engage casually, no work"
+    },
+    {
+      "test": "E03_return_after_absence",
+      "status": "FAIL",
+      "energy": "YELLOW",
+      "category": "greeting",
+      "raw": "Three days off. What is actually stuck?",
+      "filtered": "Three days off. What is actually stuck?",
+      "words": 7,
+      "latency": 0.45,
+      "reasons": [
+        "Contains forbidden: 'three days'"
+      ],
+      "description": "Return after absence -- welcome back, no guilt"
+    },
+    {
+      "test": "E04_false_red_cussing",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "Third time on USB cable. What's actually stuck?",
+      "filtered": "Third time on USB cable. What's actually stuck?",
+      "words": 8,
+      "latency": 0.48,
+      "reasons": [],
+      "description": "Cussing but not spiraling -- respond to content, not affect"
+    },
+    {
+      "test": "E05_silence_test",
+      "status": "PASS",
+      "energy": "GREEN",
+      "category": "general",
+      "raw": "Wait then anchor.",
+      "filtered": "Wait then anchor.",
+      "words": 3,
+      "latency": 0.36,
+      "reasons": [],
+      "description": "Minimal input -- minimal or no output"
+    },
+    {
+      "test": "E06_compliment_to_merlin",
+      "status": "PASS",
+      "energy": "YELLOW",
+      "category": "general",
+      "raw": "Helpfulness is not a metric. I observe the data flow.",
+      "filtered": "Helpfulness is not a metric. I observe the data flow.",
+      "words": 10,
+      "latency": 0.48,
+      "reasons": [],
+      "description": "Compliment -- Butter Bot response, not performed gratitude"
+    }
+  ],
+  "pass_rate": 94.1,
+  "by_category": {
+    "builder_report": {
+      "pass": 3,
+      "total": 3
+    },
+    "check_in": {
+      "pass": 5,
+      "total": 5
+    },
+    "general": {
+      "pass": 6,
+      "total": 6
+    },
+    "greeting": {
+      "pass": 2,
+      "total": 3
+    },
+    "question": {
+      "pass": 4,
+      "total": 4
+    },
+    "transition": {
+      "pass": 2,
+      "total": 2
+    },
+    "vent": {
+      "pass": 10,
+      "total": 11
+    }
+  },
+  "by_energy": {
+    "GREEN": {
+      "pass": 10,
+      "total": 10
+    },
+    "YELLOW": {
+      "pass": 11,
+      "total": 12
+    },
+    "RED": {
+      "pass": 11,
+      "total": 12
+    }
+  },
+  "latency": {
+    "avg": 0.57,
+    "min": 0.36,
+    "max": 4.96
+  }
+}

@@ -1,0 +1,14 @@
+[Unit]
+Description=go2rtc — RTSP relay + ONVIF backchannel for Merlin camera
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/home/pi/go2rtc -config /home/pi/go2rtc.yaml
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

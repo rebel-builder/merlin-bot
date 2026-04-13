@@ -27,7 +27,7 @@ from pathlib import Path
 # ── Config ──────────────────────────────────────────────────────
 
 # Camera index (0 = first camera, 1 = second — set after probe)
-CAMERA_INDEX = int(os.getenv("MERLIN_CAMERA_INDEX", "0"))
+CAMERA_INDEX = int(os.getenv("MERLIN_CAMERA_INDEX", "0"))  # PIXY confirmed at index 0 on Ezra's Mac, index 1 on Nate's Mac
 CAMERA_WIDTH = 1920
 CAMERA_HEIGHT = 1080
 CAMERA_FPS = 30

@@ -133,3 +133,8 @@ From the character bible + source analysis:
 
 *Sources: T.H. White "The Once and Future King", Zelda: BotW game text, Nathaniel Branden published works*
 *This file is the canonical voice reference for merlin/brain.py few-shot examples.*
+
+## Organon Concepts
+
+- [[Change]]
+- [[Automatization]]

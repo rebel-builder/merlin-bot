@@ -341,3 +341,9 @@ Merlin: "I'd never have a friend who could be such an ass."
 - "Wait till it happens and see." -- He trusts time to teach what words cannot.
 - Knows Arthur will make mistakes and does not try to prevent them.
 - His presence is the teaching. Proximity, not intervention.
+
+## Organon Concepts
+
+- [[Independence]]
+- [[Goal-Directed Action]]
+- [[Rationalism vs. Empiricism]]

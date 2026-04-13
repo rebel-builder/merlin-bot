@@ -142,9 +142,16 @@ class Orchestrator:
 class MerlinHTTPHandler(http.server.BaseHTTPRequestHandler):
     orchestrator = None  # set before serving
 
+    def _get_module(self, name):
+        for m in self.orchestrator.modules:
+            if m.name == name:
+                return m.instance
+        return None
+
     def do_POST(self):
+        length = int(self.headers.get("Content-Length", 0))
+
         if self.path == "/event":
-            length = int(self.headers.get("Content-Length", 0))
             body = self.rfile.read(length)
             try:
                 data = json.loads(body)
@@ -158,6 +165,77 @@ class MerlinHTTPHandler(http.server.BaseHTTPRequestHandler):
             except Exception:
                 self.send_response(400)
             self.end_headers()
+
+        elif self.path == "/stt":
+            # Pi client sends WAV audio, we transcribe and return text
+            import tempfile
+            audio_data = self.rfile.read(length)
+            audio_mod = self._get_module("audio_pipeline")
+            if audio_mod and audio_mod._stt:
+                with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as f:
+                    f.write(audio_data)
+                    wav_path = f.name
+                t0 = time.time()
+                text = audio_mod._stt.transcribe_file(wav_path)
+                elapsed = time.time() - t0
+                try:
+                    import os; os.unlink(wav_path)
+                except Exception:
+                    pass
+                log.info(f'[stt] "{text}" ({elapsed:.1f}s)')
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"text": text}).encode())
+            else:
+                self.send_response(503)
+                self.end_headers()
+
+        elif self.path == "/think":
+            body = json.loads(self.rfile.read(length))
+            text = body.get("text", "")
+            brain = self._get_module("brain")
+            if brain:
+                log.info(f'[pi-heard] "{text}"')
+                t0 = time.time()
+                from brain import Intent, classify_intent
+                intent = classify_intent(text)
+                reply = brain._think(text, intent=intent)
+                elapsed = time.time() - t0
+                if reply:
+                    log.info(f'[pi-reply] "{reply}" ({elapsed:.1f}s)')
+                else:
+                    reply = ""
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json")
+                self.end_headers()
+                self.wfile.write(json.dumps({"reply": reply}).encode())
+            else:
+                self.send_response(503)
+                self.end_headers()
+
+        elif self.path == "/tts":
+            body = json.loads(self.rfile.read(length))
+            text = body.get("text", "")
+            voice = self._get_module("voice")
+            if voice:
+                t0 = time.time()
+                audio = voice._generate_tts(text)
+                elapsed = time.time() - t0
+                if audio:
+                    log.info(f"[tts] {len(audio)} bytes ({elapsed:.1f}s)")
+                    self.send_response(200)
+                    self.send_header("Content-Type", "audio/wav")
+                    self.send_header("Content-Length", str(len(audio)))
+                    self.end_headers()
+                    self.wfile.write(audio)
+                else:
+                    self.send_response(500)
+                    self.end_headers()
+            else:
+                self.send_response(503)
+                self.end_headers()
+
         else:
             self.send_response(404)
             self.end_headers()
@@ -198,10 +276,13 @@ def main():
     signal.signal(signal.SIGINT, shutdown)
     signal.signal(signal.SIGTERM, shutdown)
 
-    # Start HTTP server (SO_REUSEADDR prevents "Address already in use" on restart)
+    # Start HTTP server — threaded so STT/TTS don't block health checks
     MerlinHTTPHandler.orchestrator = orch
-    http.server.HTTPServer.allow_reuse_address = True
-    http_server = http.server.HTTPServer(("0.0.0.0", config.TRACKER_LISTEN_PORT), MerlinHTTPHandler)
+
+    class ThreadedHTTPServer(http.server.ThreadingHTTPServer):
+        allow_reuse_address = True
+
+    http_server = ThreadedHTTPServer(("0.0.0.0", config.TRACKER_LISTEN_PORT), MerlinHTTPHandler)
     http_thread = threading.Thread(target=http_server.serve_forever, daemon=True, name="http")
     http_thread.start()
     log.info(f"HTTP server on :{config.TRACKER_LISTEN_PORT}")

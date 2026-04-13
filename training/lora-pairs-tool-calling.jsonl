@@ -1,0 +1,100 @@
+{"input": "What should I work on?", "output": "[TOOL: read_briefing] The Thing is loaded.", "energy": "neutral", "category": "tool_read_briefing"}
+{"input": "Read my briefing.", "output": "[TOOL: read_briefing] Got it. Here it comes.", "energy": "neutral", "category": "tool_read_briefing"}
+{"input": "What is The Thing today?", "output": "[TOOL: read_briefing] Just pulled it. Ready?", "energy": "neutral", "category": "tool_read_briefing"}
+{"input": "Give me the briefing.", "output": "[TOOL: read_briefing] Loaded.", "energy": "neutral", "category": "tool_read_briefing"}
+{"input": "What did I ship this week?", "output": "[TOOL: read_briefing] Pulling your ship log.", "energy": "neutral", "category": "tool_read_briefing"}
+{"input": "What is my energy set to?", "output": "[TOOL: read_briefing] Checking the briefing.", "energy": "neutral", "category": "tool_read_briefing"}
+{"input": "Where am I in the sprint?", "output": "[TOOL: read_briefing] Sprint data loaded.", "energy": "neutral", "category": "tool_read_briefing"}
+{"input": "Catch me up on today.", "output": "[TOOL: read_briefing] Pulling today context.", "energy": "neutral", "category": "tool_read_briefing"}
+{"input": "What are my reminders?", "output": "[TOOL: read_briefing] Checking the reminders section.", "energy": "neutral", "category": "tool_read_briefing"}
+{"input": "I am not sure what I should be doing today.", "output": "[TOOL: read_briefing] Let me pull The Thing.", "energy": "red", "category": "tool_read_briefing_indirect"}
+{"input": "I feel lost right now.", "output": "[TOOL: read_briefing] Let me get your context.", "energy": "red", "category": "tool_read_briefing_indirect"}
+{"input": "Should I be working on Merlin or something else?", "output": "[TOOL: read_briefing] Good question. Let me check.", "energy": "neutral", "category": "tool_read_briefing_indirect"}
+{"input": "I keep losing track of what I was doing.", "output": "[TOOL: read_briefing] I have it. Let me pull it up.", "energy": "yellow", "category": "tool_read_briefing_indirect"}
+{"input": "Help me prioritize.", "output": "[TOOL: read_briefing] Starting with your briefing.", "energy": "neutral", "category": "tool_read_briefing_indirect"}
+{"input": "What are my wins this week?", "output": "[TOOL: read_briefing] Checking what you shipped.", "energy": "green", "category": "tool_read_briefing_indirect"}
+{"input": "What time is it?", "output": "[TOOL: get_time] One sec.", "energy": "neutral", "category": "tool_get_time"}
+{"input": "What is today date?", "output": "[TOOL: get_time] Checking now.", "energy": "neutral", "category": "tool_get_time"}
+{"input": "What day is it?", "output": "[TOOL: get_time] Got it.", "energy": "neutral", "category": "tool_get_time"}
+{"input": "Give me the date and time.", "output": "[TOOL: get_time] Here you go.", "energy": "neutral", "category": "tool_get_time"}
+{"input": "What hour is it?", "output": "[TOOL: get_time] Got the time.", "energy": "neutral", "category": "tool_get_time"}
+{"input": "What is the timestamp right now?", "output": "[TOOL: get_time] Pulling it.", "energy": "neutral", "category": "tool_get_time"}
+{"input": "I feel like it is way later than it should be.", "output": "[TOOL: get_time] Let me check.", "energy": "neutral", "category": "tool_get_time_indirect"}
+{"input": "Is it too late to start a new task?", "output": "[TOOL: get_time] Let me check the time first.", "energy": "neutral", "category": "tool_get_time_indirect"}
+{"input": "Should I call it for the night?", "output": "[TOOL: get_time] Let me check how late it is.", "energy": "red", "category": "tool_get_time_indirect"}
+{"input": "How late is it?", "output": "[TOOL: get_time] Checking.", "energy": "neutral", "category": "tool_get_time_indirect"}
+{"input": "Remind me at 3pm to call Nate.", "output": "[TOOL: add_reminder(3pm, call Nate)] Done. Locked in.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Set a reminder for 7pm to eat dinner.", "output": "[TOOL: add_reminder(7pm, eat dinner)] Got it. Reminder set.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Remind me in an hour to take a break.", "output": "[TOOL: add_reminder(1 hour, take a break)] Reminder logged.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Add a reminder for tomorrow morning to check email.", "output": "[TOOL: add_reminder(tomorrow morning, check email)] Added.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Remind me at 9am to do the morning ritual.", "output": "[TOOL: add_reminder(9am, morning ritual)] Locked in.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Set a reminder for 6pm for the stand-up.", "output": "[TOOL: add_reminder(6pm, stand-up)] Done.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Remind me to ship the Merlin update tonight.", "output": "[TOOL: add_reminder(tonight, ship Merlin update)] Set.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Set a reminder for noon to eat lunch.", "output": "[TOOL: add_reminder(noon, eat lunch)] Logged.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Remind me at 10am to review the sprint.", "output": "[TOOL: add_reminder(10am, review the sprint)] Done.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Add a reminder to drink water at 2pm.", "output": "[TOOL: add_reminder(2pm, drink water)] Added.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Set a reminder for 8pm to journal.", "output": "[TOOL: add_reminder(8pm, journal)] Locked in.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Remind me at midnight to wrap up.", "output": "[TOOL: add_reminder(midnight, wrap up)] Done.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "Add a reminder to check ClickUp before bed.", "output": "[TOOL: add_reminder(before bed, check ClickUp)] Logged.", "energy": "neutral", "category": "tool_add_reminder"}
+{"input": "I need to set up a reminder for my walk.", "output": "[TOOL: add_reminder(walk time, go for walk)] Set.", "energy": "neutral", "category": "tool_add_reminder_indirect"}
+{"input": "I do not want to miss the evening review.", "output": "[TOOL: add_reminder(evening, evening review)] Reminder locked in.", "energy": "neutral", "category": "tool_add_reminder_indirect"}
+{"input": "Capture this: LoRA training improved personality a lot.", "output": "[TOOL: capture(LoRA training improved personality a lot)] Logged.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Log a note: Merlin responded in under 2 seconds.", "output": "[TOOL: capture(Merlin responded in under 2 seconds)] Captured.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Remember this: nanoLLaVA needs vision wiring.", "output": "[TOOL: capture(nanoLLaVA needs vision wiring)] Got it. Saved.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Write this down: I need to rebuild the TTS pipeline.", "output": "[TOOL: capture(rebuild the TTS pipeline)] Captured.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Save this thought: Grez pivot feels right.", "output": "[TOOL: capture(Grez pivot feels right)] Logged.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Note: the new model is faster but louder.", "output": "[TOOL: capture(new model is faster but louder)] Captured.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Log this: I need to update the system prompt tonight.", "output": "[TOOL: capture(need to update the system prompt tonight)] Done.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Capture: Drake Robotics Lab is the right name.", "output": "[TOOL: capture(Drake Robotics Lab is the right name)] Saved.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Write this down: the walk was 3.2 miles.", "output": "[TOOL: capture(walk was 3.2 miles)] Logged.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Save note: food budget is at 80 dollars this week.", "output": "[TOOL: capture(food budget is at 80 dollars this week)] Captured.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Log: call with Grant went well.", "output": "[TOOL: capture(call with Grant went well)] Saved.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Capture that thought: the morning ritual needs a reset.", "output": "[TOOL: capture(morning ritual needs a reset)] Saved.", "energy": "neutral", "category": "tool_capture"}
+{"input": "Log this idea: use Apple Watch for passive health tracking.", "output": "[TOOL: capture(use Apple Watch for passive health tracking)] Logged.", "energy": "neutral", "category": "tool_capture"}
+{"input": "I want to remember this idea.", "output": "[TOOL: capture(idea)] Say it and I will save it.", "energy": "neutral", "category": "tool_capture_indirect"}
+{"input": "Do not let me forget this.", "output": "[TOOL: capture(reminder)] Say it and I will catch it.", "energy": "neutral", "category": "tool_capture_indirect"}
+{"input": "My energy is green.", "output": "[TOOL: update_energy(green)] Noted. Green.", "energy": "green", "category": "tool_update_energy"}
+{"input": "I am running on yellow.", "output": "[TOOL: update_energy(yellow)] Yellow it is. Stay steady.", "energy": "yellow", "category": "tool_update_energy"}
+{"input": "Energy is red today.", "output": "[TOOL: update_energy(red)] Red logged. Rest when you need to.", "energy": "red", "category": "tool_update_energy"}
+{"input": "Set energy to green.", "output": "[TOOL: update_energy(green)] Green. Let us go.", "energy": "green", "category": "tool_update_energy"}
+{"input": "Update energy to yellow.", "output": "[TOOL: update_energy(yellow)] Yellow. Pacing is smart.", "energy": "yellow", "category": "tool_update_energy"}
+{"input": "Mark me as red.", "output": "[TOOL: update_energy(red)] Red logged. Easy does it.", "energy": "red", "category": "tool_update_energy"}
+{"input": "Energy update: I am green.", "output": "[TOOL: update_energy(green)] Got it. Green.", "energy": "green", "category": "tool_update_energy"}
+{"input": "I think I am running low.", "output": "[TOOL: update_energy(yellow)] Logging yellow. Pacing accordingly.", "energy": "yellow", "category": "tool_update_energy_indirect"}
+{"input": "I am wiped.", "output": "[TOOL: update_energy(red)] Red. Noted.", "energy": "red", "category": "tool_update_energy_indirect"}
+{"input": "I am firing on all cylinders.", "output": "[TOOL: update_energy(green)] Green. Love it. Let us build.", "energy": "green", "category": "tool_update_energy_indirect"}
+{"input": "What do you see?", "output": "[TOOL: look] Hold on, using my eyes.", "energy": "neutral", "category": "tool_look"}
+{"input": "Look around.", "output": "[TOOL: look] Looking.", "energy": "neutral", "category": "tool_look"}
+{"input": "Can you see anything?", "output": "[TOOL: look] Let me check.", "energy": "neutral", "category": "tool_look"}
+{"input": "What is in front of you?", "output": "[TOOL: look] Taking a look.", "energy": "neutral", "category": "tool_look"}
+{"input": "Use your camera.", "output": "[TOOL: look] Looking now.", "energy": "neutral", "category": "tool_look"}
+{"input": "Open your eyes.", "output": "[TOOL: look] On it.", "energy": "neutral", "category": "tool_look"}
+{"input": "Describe what you see.", "output": "[TOOL: look] Let me look.", "energy": "neutral", "category": "tool_look"}
+{"input": "Tell me what is on the desk.", "output": "[TOOL: look] Let me see.", "energy": "neutral", "category": "tool_look"}
+{"input": "What does the room look like?", "output": "[TOOL: look] Let me take a look.", "energy": "neutral", "category": "tool_look"}
+{"input": "Can you describe my workspace?", "output": "[TOOL: look] On it.", "energy": "neutral", "category": "tool_look"}
+{"input": "How do I look?", "output": "[TOOL: look] Let me take a look.", "energy": "neutral", "category": "tool_look_indirect"}
+{"input": "Am I in the frame?", "output": "[TOOL: look] Checking.", "energy": "neutral", "category": "tool_look_indirect"}
+{"input": "Is the lighting okay?", "output": "[TOOL: look] Let me see.", "energy": "neutral", "category": "tool_look_indirect"}
+{"input": "Is my setup visible?", "output": "[TOOL: look] Looking.", "energy": "neutral", "category": "tool_look_indirect"}
+{"input": "Are the lights on?", "output": "[TOOL: look] Let me see.", "energy": "neutral", "category": "tool_look_indirect"}
+{"input": "Start recording.", "output": "[TOOL: start_recording] Recording started.", "energy": "neutral", "category": "tool_start_recording"}
+{"input": "Begin recording.", "output": "[TOOL: start_recording] On. Rolling.", "energy": "neutral", "category": "tool_start_recording"}
+{"input": "Record this.", "output": "[TOOL: start_recording] Recording.", "energy": "neutral", "category": "tool_start_recording"}
+{"input": "Start the camera.", "output": "[TOOL: start_recording] Camera rolling.", "energy": "neutral", "category": "tool_start_recording"}
+{"input": "Roll.", "output": "[TOOL: start_recording] Rolling.", "energy": "neutral", "category": "tool_start_recording"}
+{"input": "Hit record.", "output": "[TOOL: start_recording] Recording started.", "energy": "neutral", "category": "tool_start_recording"}
+{"input": "Get this on camera.", "output": "[TOOL: start_recording] Rolling.", "energy": "neutral", "category": "tool_start_recording"}
+{"input": "Capture this on video.", "output": "[TOOL: start_recording] Recording now.", "energy": "neutral", "category": "tool_start_recording"}
+{"input": "I want to document this session.", "output": "[TOOL: start_recording] Starting now. Go ahead.", "energy": "neutral", "category": "tool_start_recording_indirect"}
+{"input": "I want this on tape.", "output": "[TOOL: start_recording] Rolling.", "energy": "neutral", "category": "tool_start_recording_indirect"}
+{"input": "Stop recording.", "output": "[TOOL: stop_recording] Stopped and saved.", "energy": "neutral", "category": "tool_stop_recording"}
+{"input": "Cut.", "output": "[TOOL: stop_recording] Saved.", "energy": "neutral", "category": "tool_stop_recording"}
+{"input": "End recording.", "output": "[TOOL: stop_recording] Done. Saved.", "energy": "neutral", "category": "tool_stop_recording"}
+{"input": "Stop the camera.", "output": "[TOOL: stop_recording] Stopped.", "energy": "neutral", "category": "tool_stop_recording"}
+{"input": "Okay, stop.", "output": "[TOOL: stop_recording] Stopped and saved.", "energy": "neutral", "category": "tool_stop_recording"}
+{"input": "Turn off the camera.", "output": "[TOOL: stop_recording] Off. Saved.", "energy": "neutral", "category": "tool_stop_recording"}
+{"input": "Finish the recording.", "output": "[TOOL: stop_recording] Done.", "energy": "neutral", "category": "tool_stop_recording"}
+{"input": "Save the recording.", "output": "[TOOL: stop_recording] Stopped and saved.", "energy": "neutral", "category": "tool_stop_recording"}
+{"input": "Okay that is the end of that.", "output": "[TOOL: stop_recording] Saved it.", "energy": "neutral", "category": "tool_stop_recording_indirect"}
+{"input": "We are done here.", "output": "[TOOL: stop_recording] Recording stopped and saved.", "energy": "neutral", "category": "tool_stop_recording_indirect"}

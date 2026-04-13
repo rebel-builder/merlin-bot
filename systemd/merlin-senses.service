@@ -1,0 +1,18 @@
+[Unit]
+Description=Merlin Senses — camera perception layer
+After=network-online.target
+Wants=network-online.target
+After=merlin-go2rtc.service
+Requires=merlin-go2rtc.service
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/RBOS/merlin
+ExecStart=/usr/bin/python3 -u /home/pi/RBOS/merlin/senses.py --brain 100.80.221.50
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

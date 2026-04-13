@@ -59,10 +59,11 @@ class StreamManager:
 
         while self._running:
             try:
-                log.info(f"Connecting to Pi go2rtc relay: {config.GO2RTC_RTSP}")
+                rtsp_url = config.CAMERA_RTSP_AUDIO
+                log.info(f"Connecting to camera RTSP: {config.CAMERA_IP}")
                 self._proc = subprocess.Popen(
                     ["ffmpeg", "-rtsp_transport", "tcp",
-                     "-i", config.GO2RTC_RTSP,
+                     "-i", rtsp_url,
                      "-vn", "-acodec", "pcm_s16le",
                      "-ar", str(config.MIC_SAMPLE_RATE), "-ac", "1",
                      "-f", "s16le", "pipe:1"],
@@ -114,7 +115,7 @@ class VoiceDetector:
             self._model = model
             self._get_speech_prob = model
             log.info("Silero VAD loaded (torch)")
-        except ImportError:
+        except Exception:
             log.warning("torch not available — falling back to RMS-based VAD")
             self._model = None
 
@@ -218,6 +219,28 @@ class Transcriber:
         except ImportError:
             log.warning("No STT backend available — pip install mlx-whisper")
 
+    def transcribe_file(self, wav_path: str) -> str:
+        """Transcribe a WAV file to text. Used by /stt endpoint for Pi client."""
+        if not self._backend:
+            return ""
+        try:
+            if self._backend == "mlx-whisper":
+                import mlx_whisper
+                result = mlx_whisper.transcribe(
+                    wav_path,
+                    path_or_hf_repo="mlx-community/whisper-small-mlx",
+                    language="en"
+                )
+                text = result.get("text", "").strip()
+            else:
+                return ""
+            noise = {"", "(silence)", "[BLANK_AUDIO]", "you", "Thank you.",
+                     "Thanks for watching!", "Bye.", ".", ".."}
+            return text if text and text not in noise else ""
+        except Exception:
+            log.exception("Transcription error")
+            return ""
+
     def transcribe(self, pcm_bytes: bytes) -> str:
         """Transcribe PCM audio to text. Returns empty string on failure."""
         if len(pcm_bytes) < config.MIC_SAMPLE_RATE * 2:  # < 1 second
@@ -266,7 +289,11 @@ class AudioPipeline:
     """Complete audio pipeline module. Implements the Module contract."""
 
     def __init__(self):
-        self._stream = StreamManager()
+        if config.AUDIO_SOURCE == "usb":
+            from audio_usb import USBStreamManager
+            self._stream = USBStreamManager()
+        else:
+            self._stream = StreamManager()
         self._vad = VoiceDetector()
         self._stt = Transcriber()
         self._thread = None

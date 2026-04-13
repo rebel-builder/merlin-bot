@@ -7,10 +7,14 @@ __pycache__/
 venv/
 *.egg
 
-# Environment
+# Environment (SECRETS — never commit)
 .env
 .env.*
 !.env.example
+
+# Biometric data (PRIVATE — face photos, voice prints, embeddings)
+faces/
+voices/
 
 # Briefing data (personal state, generated at runtime)
 briefing/*.json
@@ -19,17 +23,26 @@ briefing/*.json
 state.json
 /tmp/
 
-# Audio files (generated at runtime)
+# Sound files — include the sounds/ directory but not generated runtime audio
 *.wav
 *.mp3
+!sounds/*.wav
 !sounds/*.mp3
 
 # Logs
 logs/
 *.log
 
-# Models (downloaded, too large for git)
+# Models (too large for git)
 models/*.onnx
+training/merlin-gemma4-lora.gguf
+training/venv/
+training/mlx/
 
 # macOS
 .DS_Store
+.stfolder/
+
+# Windows build artifacts
+windows/venv/
+windows/*.onnx

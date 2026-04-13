@@ -1,0 +1,19 @@
+{
+  "servers": {
+    "notes": {
+      "command": "node",
+      "args": ["/Users/ezradrake/Library/Application Support/Claude/Claude Extensions/ant.dir.ant.anthropic.notes/server/index.js"],
+      "enabled": true
+    },
+    "imessages": {
+      "command": "node",
+      "args": ["/Users/ezradrake/Library/Application Support/Claude/Claude Extensions/ant.dir.ant.anthropic.imessage/server/index.js"],
+      "enabled": true
+    },
+    "mac": {
+      "command": "node",
+      "args": ["/Users/ezradrake/Library/Application Support/Claude/Claude Extensions/ant.dir.gh.k6l3.osascript/server/index.js"],
+      "enabled": true
+    }
+  }
+}

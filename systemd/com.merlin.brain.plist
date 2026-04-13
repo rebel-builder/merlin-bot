@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Merlin v2 LaunchAgent — deploys to Nate's Mac (The Companion)
+     Install: cp to ~/Library/LaunchAgents/ on Nate's Mac
+     Prereqs: Ollama 0.20+, gemma4:e4b, merlin/.venv with deps installed
+     Requires: Full Disk Access for venv python3 (System Settings > Privacy & Security) -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.merlin.brain</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/ezradrake/Documents/RBOS/merlin/.venv/bin/python3</string>
+        <string>-u</string>
+        <string>/Users/ezradrake/Documents/RBOS/merlin/main.py</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/ezradrake/Documents/RBOS/merlin</string>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/tmp/merlin-v2.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/merlin-v2.log</string>
+</dict>
+</plist>
