@@ -46,3 +46,6 @@ training/mlx/
 # Windows build artifacts
 windows/venv/
 windows/*.onnx
+
+# Claude worktrees
+.claude/worktrees/
