@@ -31,7 +31,9 @@ class Brain:
                 if models:
                     print(f"[brain] LM Studio connected. Model: {models[0].get('id', 'unknown')}")
                 else:
-                    print("[brain] LM Studio connected but no model loaded. Load one in LM Studio.")
+                    print("[brain] ⚠️  LM STUDIO HAS NO MODEL LOADED!")
+                    print("[brain] ⚠️  Open LM Studio → search for a model → download → load it")
+                    print("[brain] ⚠️  Merlin CANNOT respond without a model. This is the #1 setup issue.")
             else:
                 print(f"[brain] LM Studio responded with {r.status_code}.")
         except requests.ConnectionError:
